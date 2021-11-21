@@ -1,1 +1,1 @@
-# M1_Project_Goal
+# M1_TicTacToe_Goal
