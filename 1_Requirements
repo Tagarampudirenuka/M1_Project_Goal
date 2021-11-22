@@ -1,1 +1,51 @@
+***Project Requirements***
+
+1.Functional Requirements:
+
+T4 supports two types of users:
+•	The tournament director should be able to create a tournament and oversee its execution.
+•	players should be able to connect to the tournament and participate as arranged by the tournament director.
+Each of these users has the following capabilities:
+
+1.1 Tournament Director capabilities:
+
+The tournament director shall be able to execute the tournament server on a given machine (and valid port number, the default being 30303). There is an administrative client (made available to the tournament director) where the director can securely login to the tournament server to request the following functions:
+•	shutdown the tournament (which ends the server)
+•	start the tournament by determining the number of rounds to schedule, based upon the number of players connected to the tournament server; there must be at least 16 players to form a working tournament
+•	initiate a round in the tournament (by randomly assigning an even number of players to a set of tables, and randomly assigning the known TicTacToe variations to the tables)
+•	monitor the progress of an existing tournament (including the board state of all available tables, which player's turn is active, the status of the timers on each table) and this information should be updated 'in near real-time' as the individual tables proceed.
+•	kick a player out of the tournament (all future games by that player to be forfeited)
+
+1.2 Player capabilities:
+
+The player shall be able to execute a T4 client that can securely login to the tournament server to request the following functions:
+•	join tournament, to become eligible to be selected by the tournament director to play
+•	display graphically the state of a table within which the player is participating
+•	select (valid) moves to be played
+
+1.3 System capabilities:
+
+The tournament system has some automatic capabilities, in particular:
+•	If the tournament director has configured the tournament to be on 'auto-play' then each successive round in the tournament will proceed without need for the tournament director to be involved.
+
+2 Nonfunctional Requirements:
+
+2.1 Usability:
+    Standard GUI builders are employed for the T4 clients.
+    All code is written using Java to ensure that T4 Servers and T4 Clients can execute on MacOS, Linux, Un*x, Solaris, and Windows systems.
+2.2 Reliability:
+    If the T4 tournament server fails, all connected T4 clients are immediately told of the situation, and the tournament is canceled. The clients can elect to reconnect (but the server may be permanently affected). There is no guarantee of continued service if a T4 tournament fails. If a T4 client fails, then all remaining games in the tournament are forfeited. If a disconnected client reconnects to the original tournament, he will only be able to participate once all rounds in the tournament have completed.
+2.3 Performance:
+    The target measure for average round-trip communication between T4 clients and T4 servers is 250ms. This performance measure is not relevant to the initial start-up time. Given that the information content of individual games is quite small, we expect to be able to support 100s of concurrent users within an individual tournament (though we restrict our initial set of users to no more than 64).
+2.4 Supportability:
+    New Tic-Tac-Toe variations should be easily integrated into the T4 Tournament code, regardless of the state of an active tournament. Variations that are integrated after a tournament has started are only available once the tournament completes all of its rounds, and resets.
+2.5 Implementation:
+    Java JDK 1.5, together with the CMI Implementation (tutorial to be made available soon).
+2.6 Interface:
+    Omit this from your document
+2.7 Packaging:
+    Omit this from your document
+2.8 Legal
+    Omit from your document
+
 
