@@ -1,4 +1,6 @@
-# Structural1
-![image](https://user-images.githubusercontent.com/83264721/143004091-1bcb3a32-e7a8-48ca-a6c4-b8d3738c9e56.png)
-# Structural1
-![image](https://user-images.githubusercontent.com/83264721/143004513-053b5a9f-58b8-4389-9571-a90c1d356929.png)
+
+# Behavioural 1
+![image](https://user-images.githubusercontent.com/83264721/143003120-bd7fb9b2-fd57-4c37-b0b4-998504b74cfb.png)
+
+# Behavioural 2
+![image](https://user-images.githubusercontent.com/83264721/143002302-0187afe0-ccea-460c-a5e4-96125d8eb548.png)
